@@ -1,0 +1,150 @@
+@import "../components/components.header.css";
+@import "../components/components.navbar.css";
+@import "../components/components.footer.css";
+@import "../components/components.cards.css";
+@import "../components/components.rows.css";
+@import "../components/components.icon.css";
+@import "../vars.css";
+
+.grid__container {
+    display: grid;
+    height: inherit;
+    width: 100%;
+}
+
+#hero {
+    color: white;
+    font-weight: bold;
+    background: var(--bg-color);
+    width: inherit;
+    overflow: hidden;
+}
+
+#hero div {
+    height: inherit;
+    grid-template-rows: repeat(3 1fr);
+    place-items: center;
+    width: inherit;
+}
+
+.hero__imagem__fundo {
+    width: 80%;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.hero__imagem__frente {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    align-self: end;
+    justify-self: center;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    max-height: 70vh;
+    filter: drop-shadow(12px 24px 86px rgba(0, 0, 0, 0.2));
+}
+
+#sinopse {
+    height: max-content;
+}
+
+#sinopse p {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+#sinopse .flex-container {
+    display: flex;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: var(--font-color);
+}
+
+.description {
+    flex: 1;
+    height: max-content;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+}
+
+.sinopse-images {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+.dark .sinopse__fundo {
+    opacity: 0.4;
+}
+
+.sinopse__fundo {
+    mix-blend-mode: hard-light;
+    opacity: 0.15;
+    object-fit: cover;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.sinopse__frente {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 100;
+    align-self: end;
+}
+
+.tagline {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    text-transform: uppercase;
+    width: 1000%;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ffffff60;
+}
+
+.trailer-section {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.trailer-wrapper iframe {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#recommended {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+}
+
+@media (max-width: 860px) {
+    .description {
+        width: 100%;
+        padding: 1rem 1.5rem 2rem 1.5rem;
+    }
+
+    .description p {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+    }
+
+    .sinopse-images {
+        display: none;
+    }
+
+    .sinopse-images * {
+        display: none;
+    }
+}

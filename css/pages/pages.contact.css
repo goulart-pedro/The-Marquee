@@ -1,0 +1,71 @@
+@import "../vars.css";
+@import "../components/components.buttons.css";
+@import "../components/components.footer.css";
+@import "../components/components.navbar.css";
+@import "../components/components.header.css";
+@import "../components/components.icon.css";
+
+/* .wrapper {
+    height: max-content;
+} */
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.form-title {
+    justify-self: start;
+    margin-bottom: 0.8rem;
+    color: var(--font-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-form input {
+    border-radius: 3px;
+    padding: 3ex;
+    background: var(--bg-color-secondary);
+    border: none;
+    border: 1px solid var(--bg-color-secondary);
+}
+
+.contact-form input[placeholder] {
+    color: var(--font-color);
+}
+
+.contact-form input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.contact-form textarea {
+    border-radius: 3px;
+    padding: 2ex;
+    background: var(--bg-color-secondary);
+    border: 1px solid var(--bg-color-secondary);
+}
+
+.contact-form textarea[placeholder] {
+    color: var(--font-color);
+}
+.contact-form textarea:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.submit {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 1.25em;
+    color: white;
+    font-weight: bold;
+}

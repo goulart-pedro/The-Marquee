@@ -1,0 +1,66 @@
+.login-prompt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--main-margin);
+    border-radius: 0.4rem;
+    background-color: var(--bg-color-elevated);
+    box-shadow: 0 16px 32px 0 #00000020;
+}
+
+.login-confirmation {
+    text-align: center;
+    background-color: #20ffaa20;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.prompt-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-prompt .section-title {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+@supports not (gap: 0.6rem) {
+    .form-wrapper * {
+        padding-bottom: 0.6rem;
+    }
+}
+
+.form-wrapper input {
+    background-color: var(--bg-color-secondary);
+    color: var(--font-color);
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border: 1px solid #2c2c2c20;
+    border: none;
+    border-radius: 3px;
+}
+
+.form-wrapper input::placeholder {
+    color: var(--font-color);
+}
+
+#login-close-button {
+    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: var(--font-color);
+}

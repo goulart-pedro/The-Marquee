@@ -1,0 +1,75 @@
+.button {
+    --button-secondary-color: #e0e0e0;
+    --button-border-radius: 0.25rem;
+    --button-padding: 0.75rem;
+    --button-font-size: 0.85rem;
+
+    position: relative;
+    overflow: hidden;
+    transition: background 400ms;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    outline: 0;
+    border: 0;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+}
+
+button * {
+    pointer-events: none;
+}
+
+.button__label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+button[btn-variant="contained"]:disabled {
+    background: var(--button-secondary-color);
+    box-shadow: none;
+    cursor: default;
+}
+
+button[btn-variant="text"]:disabled,
+button[btn-variant="outlined"]:disabled {
+    color: var(--button-secondary-color);
+    cursor: default;
+}
+
+button[btn-variant="contained"] {
+    background: var(--primary-color);
+    color: #e2e2e2;
+    fill: #e2e2e2;
+    box-shadow: 0 0.2rem 0.3rem #00000013;
+}
+
+button[btn-variant="contained"]:active,
+button[btn-variant="contained"]:focus {
+    box-shadow: 0 3px 6px 0 #00000015, 0 1px 2px 0 #00000023;
+}
+
+button[btn-variant="outlined"] {
+    background: none;
+    border: solid 1px #ffffff30;
+    color: var(--primary-color);
+    fill: var(--primary-color);
+}
+
+button[btn-variant="toggle"] {
+    background: none;
+    border: solid 1px var(--button-secondary-color);
+    border-radius: 2px;
+}
+
+.button__icon {
+    fill: var(--font-color);
+}
+
+button[btn-variant="text"] {
+    background: none;
+    color: var(--primary-color);
+    fill: var(--primary-color);
+}

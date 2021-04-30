@@ -1,0 +1,50 @@
+mq-card {
+    border-radius: 3px;
+    width: max-content;
+    height: max-content;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* position: relative; */
+}
+
+mq-card[mq-variant="small"] img {
+    border-radius: inherit;
+    object-fit: cover;
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+mq-card img {
+    background: #00000010;
+}
+
+mq-card[mq-variant="small"] div,
+mq-card[mq-variant="medium"] div {
+    padding: 0.4rem;
+    align-self: flex-start;
+    display: flex;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+mq-card[mq-variant="small"] div {
+    width: 7.5rem;
+}
+
+mq-card[mq-variant="medium"] img {
+    border-radius: inherit;
+    object-fit: cover;
+    height: 13rem;
+    width: 9.5rem;
+}
+
+mq-card .card-link {
+    border-radius: 3px;
+    text-decoration: none;
+}

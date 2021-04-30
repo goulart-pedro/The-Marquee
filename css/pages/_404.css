@@ -1,0 +1,18 @@
+@import "../vars.css";
+@import "../components/components.navbar.css";
+@import "../components/components.footer.css";
+@import "../components/components.icon.css";
+
+.error__large {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--font-color);
+}
+
+.error__large h1 {
+    font-size: 5rem;
+}

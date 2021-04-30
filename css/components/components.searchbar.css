@@ -1,0 +1,61 @@
+@import "../vars.css";
+
+.close-icon {
+    width: 5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--font-color);
+}
+
+.search-area {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
+    background: var(--bg-color);
+    filter: brightness(120%);
+}
+
+.input-wrapper {
+    display: flex;
+    outline: none;
+}
+
+.search-bar {
+    color: var(--font-color);
+    background: none;
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    padding: var(--main-margin);
+}
+
+.search-bar::placeholder {
+    color: var(--font-color);
+}
+
+.search-card {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+    background: var(--bg-color);
+    filter: brightness(120%);
+    cursor: pointer;
+    padding: 2ex;
+    transition: background 25ms ease;
+}
+
+.search-card a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.search-card:hover > a {
+    color: var(--primary-color);
+}
+
+.search-card:hover {
+    filter: brightness(70%);
+}

@@ -1,0 +1,19 @@
+.view-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 4rem);
+    overflow-x: hidden;
+}
+
+@media (min-width: 860px) {
+    .view-wrapper {
+        background: var(--bg-color-secondary);
+        /* padding-right: 5rem; */
+        width:100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-radius: 3px;
+        /* margin-left: 5rem; */
+        /* margin-left: 30%; */
+        /* border: 2px solid #ffffff20; */
+    }
+}

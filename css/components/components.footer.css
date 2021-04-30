@@ -1,0 +1,16 @@
+footer {
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+footer * {
+    color: var(--font-color);
+}
+
+.footer-names {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}

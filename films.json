@@ -1,0 +1,218 @@
+{
+    "00000":{
+        "title" : "1917",
+        "tagline" : "hope is something",
+        "description" : "Na Primeira Guerra Mundial, dois soldados britânicos recebem ordens aparentemente impossíveis de cumprir. Em uma corrida contra o tempo, eles precisam atravessar o território inimigo e entregar uma mensagem que pode salvar 1.600 de seus companheiros.",
+        "colors":{
+            "primary" : "#243a41",
+            "secondary": "#39525f"
+        },
+        "trailer-link": "UcmZN0Mbl04",
+        "related": ["00003", "00005", "00008", "00009"],
+        "images": {
+            "hero__frente": "../img/1917__hero__frente.webp",
+            "hero__fundo": "../img/1917__hero__fundo.webp",
+            "sinopse__frente": "../img/1917__sinopse__frente.webp",
+            "sinopse__fundo": "../img/1917__sinopse__fundo.webp",
+            "thumbnail": "../img/1917__thumbnail.webp"
+        }
+    },
+    "00001":{
+        "title" : "O Guarda Costas",
+        "tagline" : "will always love you",
+        "description" : "Frank Farmer, um guarda-costas altamente eficiente e caro, é contratado para proteger Rachel Marron, uma grande cantora e atriz que está recebendo cartas anônimas e ameaçadoras. Frank é um ex-agente do Serviço Secreto que ainda não se perdoou do sentimento de culpa em relação à sua inabilidade de proteger o presidente Reagan, que quase foi assassinado. Frank e Rachel se apaixonam e logo ele se torna parte integrante do círculo íntimo dela. Paralelamente, novos atentados acontecem.",
+        "colors":{
+            "primary" : "#ecb0b0",
+            "secondary": "#484645"
+        },
+        "trailer-link": "cndM_b_ftpw",
+        "related": ["00011", "00010", "00002", "00005"],
+        "images": {
+            "hero__frente": "../img/bodyGuard__hero__frente.webp",
+            "hero__fundo": "../img/bodyGuard__hero__fundo.webp",
+            "sinopse__frente": "../img/bodyGuard__sinopse__frente.webp",
+            "sinopse__fundo": "../img/bodyGuard__sinopse__fundo.webp",
+            "thumbnail": "../img/bodyGuard__thumbnail.webp"
+        }
+    },
+    "00002":{
+        "title" : "Bohemian Rhapsody",
+        "tagline" : "is this the real life",
+        "description" : "Freddie Mercury, Brian May, Roger Taylor e John Deacon formam a banda de rock Queen em 1970. Quando o estilo de vida agitado de Mercury começa a sair de controle, o grupo precisa encontrar uma forma de lidar com o sucesso e os excessos de seu líder.",
+        "colors": {
+            "primary": "#983f99",
+            "secondary":  "#ffc086"
+        },
+        "trailer-link": "GryRsVhOvxo",
+        "related": ["00010", "00001", "00011", "00005"],
+        "images": {
+            "hero__frente": "../img/bohemianRhapsody__hero__frente.webp",
+            "hero__fundo": "../img/bohemianRhapsody__hero__fundo.webp",
+            "sinopse__frente": "../img/bohemianRhapsody__sinopse__frente.webp",
+            "sinopse__fundo": "../img/bohemianRhapsody__sinopse__fundo.webp",
+            "thumbnail": "../img/bohemianRhapsody__thumbnail.webp"
+        }
+    },
+    "00003":{
+        "title" : "O Destino de uma Nação",
+        "tagline" : "never never surrender",
+        "description" : "Winston Churchill (Gary Oldman) está prestes a encarar um de seus maiores desafios: tomar posse do cargo de Primeiro Ministro da Grã-Bretanha. Paralelamente, ele começa a costurar um tratado de paz com a Alemanha Nazista que pode significar o fim de anos de conflito.",
+        "colors":{
+            "primary": "#0f2429",
+            "secondary" : "#0b0f12"
+        },
+        "trailer-link": "LtJ60u7SUSw",
+        "related": ["00000", "00005", "00008", "00009"],
+        "images": {
+            "hero__frente": "../img/darkestHour__hero__frente.webp",
+            "hero__fundo": "../img/darkestHour__hero__fundo.webp",
+            "sinopse__frente": "../img/darkestHour__sinopse__frente.webp",
+            "sinopse__fundo": "../img/darkestHour__sinopse__fundo.webp",
+            "thumbnail": "../img/darkestHour__thumbnail.webp"
+        }
+    },
+    "00004":{
+        "title" : "Os Oito Odiados ",
+        "tagline" : "No one comes here without a good reason",
+        "description" : "Em busca de abrigo para se proteger de uma nevasca, dois caçadores de recompensas, um prisioneiro e um homem que alega ser xerife conhecem quatro estranhos.",
+        "colors":{
+            "primary": " #cc1f1f",
+            "secondary" : "#141111"
+        },
+        "trailer-link": "nIOmotayDMY",
+        "related": ["00009", "00006", "00007", "00003"],
+        "images": {
+            "hero__frente": "../img/hatefulEight__hero__frente.webp",
+            "hero__fundo": "../img/hatefulEight__hero__fundo.webp",
+            "sinopse__frente": "../img/hatefulEight__sinopse__frente.webp",
+            "sinopse__fundo": "../img/hatefulEight__sinopse__fundo.webp",
+            "thumbnail": "../img/hatefulEight__thumbnail.webp"
+        }
+    },
+    "00005":{
+        "title" : "Interestelar",
+        "tagline" : "the only way",
+        "description" : "As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.",
+        "colors":{
+            "primary": " #20669e",
+            "secondary" : " #2b2e37"
+        },
+        "trailer-link": "2LqzF5WauAw",
+        "related": ["00003", "00000", "00008", "00009"],
+        "images": {
+            "hero__frente": "../img/interstellar__hero__frente.webp",
+            "hero__fundo": "../img/interstellar__hero__fundo.webp",
+            "sinopse__frente": "../img/interstellar__sinopse__frente.webp",
+            "sinopse__fundo": "../img/interstellar__sinopse__fundo.webp",
+            "thumbnail": "../img/interstellar__thumbnail.webp"
+        }
+    },
+    "00006":{
+        "title" : "Logan",
+        "tagline" : "i hurt myself today",
+        "description" : "Em 2024, os mutantes estão em franco declínio, e as pessoas não sabem o real motivo. Uma organização está transformando as crianças mutantes em verdadeiras assassinas. Wolverine, cansado de tudo e a pedido de um cada vez mais enfraquecido Professor Xavier, precisa proteger a jovem e poderosa Laura Kinney, conhecida como X-23. Enquanto isso, o vilão Nathaniel Essex amplia seu projeto de destruição.",
+        "colors":{
+            "primary": "#684a20",
+            "secondary" : "#241204"
+        },
+        "trailer-link": "Div0iP65aZo",
+        "related": ["00004", "00009", "00007", "00003"],
+        "images": {
+            "hero__frente": "../img/logan__hero__frente.webp",
+            "hero__fundo": "../img/logan__hero__fundo.webp",
+            "sinopse__frente": "../img/logan__sinopse__frente.webp",
+            "sinopse__fundo": "../img/logan__sinopse__fundo.webp",
+            "thumbnail": "../img/logan__thumbnail.webp"
+        }
+    },
+    "00007":{
+        "title" : "O Senhor dos Anéis",
+        "tagline" : "one ring to rule them all",
+        "description" : "Em busca de abrigo para se proteger de uma nevasca, dois caçadores de recompensas, um prisioneiro e um homem que alega ser xerife conhecem quatro estranhos.",
+        "colors":{
+            "primary": "#5c301b",
+            "secondary" : "#6f4734"
+        },
+        "trailer-link": "V75dMMIW2B4",
+        "related": ["00004", "00006", "00009", "00003"],
+        "images": {
+            "hero__frente": "../img/lordOfTheRings__hero__frente.webp",
+            "hero__fundo": "../img/lordOfTheRings__hero__fundo.webp",
+            "sinopse__frente": "../img/lordOfTheRings__sinopse__frente.webp",
+            "sinopse__fundo": "../img/lordOfTheRings__sinopse__fundo.webp",
+            "thumbnail": "../img/lordOfTheRings__thumbnail.webp"
+        }
+    },
+    "00008":{
+        "title" : "Perdido Em Marte",
+        "tagline" : "bring him home",
+        "description" : "O astronauta Mark Watney é enviado a uma missão para Marte, mas após uma severa tempestade, ele é dado como morto, abandonado pelos colegas e acorda sozinho no planeta inóspito com escassos suprimentos e sem saber como reencontrar os companheiros ou retornar à Terra. Ele inicia então uma dura luta pela própria sobrevivência, utilizando de todo o seu conhecimento científico para fazer contato e retornar para casa.",
+        "colors":{
+            "primary": "#743f1d",
+            "secondary" : "#412519"
+        },
+        "trailer-link": "ej3ioOneTy8",
+        "related": ["00003", "00005", "00000", "00009"],
+        "images": {
+            "hero__frente": "../img/martian__hero__frente.webp",
+            "hero__fundo": "../img/martian__hero__fundo.webp",
+            "sinopse__frente": "../img/martian__sinopse__frente.webp",
+            "sinopse__fundo": "../img/martian__sinopse__fundo.webp",
+            "thumbnail": "../img/martian__thumbnail.webp"
+        }
+    },
+    "00009":{
+        "title" : "Era uma vez no Oeste",
+        "tagline" : "make you and li",
+        "description" : "Em virtude das terras que possuía serem futuramente a rota da estrada de ferro, um pai e todos os filhos são brutalmente assassinados por um matador profissional. Entretanto, ninguém sabia que ele, viúvo há seis anos, tinha se casado com uma outra mulher, de Nova Orleans, que passa ser a dona do local e recebe a proteção de um hábil atirador, que tem contas a ajustar com o frio matador.",
+        "colors":{
+            "primary": "#743f1d",
+            "secondary" : "#412519"
+        },
+        "trailer-link": "MNGQ1hUyx-k",
+        "related": ["00004", "00006", "00007", "00003"],
+        "images": {
+            "hero__frente": "../img/onceUponATime__hero__frente.webp",
+            "hero__fundo": "../img/onceUponATime__hero__fundo.webp",
+            "sinopse__frente": "../img/onceUponATime__sinopse__frente.webp",
+            "sinopse__fundo": "../img/onceUponATime__sinopse__fundo.webp",
+            "thumbnail": "../img/onceUponATime__thumbnail.webp"
+        }
+    },
+    "00010":{
+        "title" : "O Fantasma da Ópera",
+        "tagline" : "my power ov",
+        "description" : "O Fantasma, em seu esconderijo em baixo de uma casa de ópera em Paris, no Século 19, planeja uma forma de se aproximar da vocalista Christine Daae. Ele, usando uma máscara para esconder um defeito congênito, consegue os papéis principais para a estrela, mas ela se apaixona pelo benfeitor das artes, Raoul. Apavorado com a ideia de sua ausência, o Fantasma cria um plano para manter Christine ao seu lado, enquanto Raoul tenta derrubar o esquema. missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.",
+        "colors":{
+            "primary": "#e4b49c",
+            "secondary" : "#141111"
+        },
+        "trailer-link": "N91AL8sAh9o-k",
+        "related": ["00011", "00001", "00002", "00005"],
+        "images": {
+            "hero__frente": "../img/phantomOfTheOpera__hero__frente.webp",
+            "hero__fundo": "../img/phantomOfTheOpera__hero__fundo.webp",
+            "sinopse__frente": "../img/phantomOfTheOpera__sinopse__frente.webp",
+            "sinopse__fundo": "../img/phantomOfTheOpera__sinopse__fundo.webp",
+            "thumbnail": "../img/phantomOfTheOpera__thumbnail.webp"
+        }
+    },
+    "00011":{
+        "title" : "Titanic",
+        "tagline" : "never let go",
+        "description" : "Um artista pobre e uma jovem rica se conhecem e se apaixonam na fatídica jornada do Titanic, em 1912. Embora esteja noiva do arrogante herdeiro de uma siderúrgica, a jovem desafia sua família e amigos em busca do verdadeiro amor.",
+        "colors":{
+            "primary": "#913c1d",
+            "secondary" : "#301408"
+        },
+        "trailer-link": "b0KYvGa_nN8",
+        "related": ["00010", "00001", "00002", "00005"],
+        "images": {
+            "hero__frente": "../img/titanic__hero__frente.webp",
+            "hero__fundo": "../img/titanic__hero__fundo.webp",
+            "sinopse__frente": "../img/titanic__sinopse__frente.webp",
+            "sinopse__fundo": "../img/titanic__sinopse__fundo.webp",
+            "thumbnail": "../img/titanic__thumbnail.webp"
+        }
+    }
+}
