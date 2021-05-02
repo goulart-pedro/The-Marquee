@@ -1,4 +1,5 @@
 .button {
+    --button-primary-color: hsl(265, 100%, 47%);
     --button-secondary-color: #e0e0e0;
     --button-border-radius: 0.25rem;
     --button-padding: 0.75rem;
@@ -40,7 +41,7 @@ button[btn-variant="outlined"]:disabled {
 }
 
 button[btn-variant="contained"] {
-    background: var(--primary-color);
+    background: var(--button-primary-color);
     color: #e2e2e2;
     fill: #e2e2e2;
     box-shadow: 0 0.2rem 0.3rem #00000013;

@@ -1,5 +1,4 @@
-import { Theme } from "./jsmodules/theme.js";
-import { FormValidator } from "./jsmodules/formValidator.js";
+import * as theme from "./js/theme.js";
 
 window.onload = () => {
     loadThemeSwitcher();
@@ -8,15 +7,7 @@ window.onload = () => {
 };
 
 function loadThemeSwitcher() {
-    class ThemeControll extends HTMLElement {
-        constructor() {
-            super();
-            const theme = new Theme();
-            const button = document.querySelector("#theme-button");
-            button.addEventListener("click", theme.alternate);
-        }
-    }
-    customElements.define("theme-controll", ThemeControll);
+    theme.updateClass()
 }
 
 function loadSearch() {

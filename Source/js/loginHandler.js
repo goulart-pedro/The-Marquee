@@ -1,23 +1,34 @@
+
 const handleLogin = async (inputEvent, form) => {
-    inputEvent.preventDefault()
+    inputEvent.preventDefault() // stops form submission
+    const updateLoginStatus = makeHtmlUpdater(document.querySelector('[js-data=login-status]'))
+    updateLoginStatus('Verificando Informações');
 
-    let formData = getFormData(form);
+    const formData = getFormData(form);
+    const isUserAuthorized = await getAuth(formData);
+    const statusMessage = makeStatusMessage(isUserAuthorized)
+    updateLoginStatus(statusMessage)
 
-    updateLoginStatus = updateInnerHtml(document.querySelector('[js-data=login-status]'))
-    updateLoginStatus('Verificando Credenciais')
-
-    const response = await fetch("auth/auth.php", {
-            body: formData,
-            method: "post"
-        });
-
-    updateLoginStatus(await response.text())
-    return false
+    if (isUserAuthorized == 'ok')
+        setTimeout(() => window.location.href = '?page=home', 3000);
 }
 
+function makeStatusMessage(isUserAuthorized) {
+    if (isUserAuthorized == 'no')
+        return "Senha ou Usuário incorreto(s)"
+   
+    return "Login realizado; Redirecionando em 3 segundos"
+}
 
-const updateInnerHtml = (element) => (statusMessage) => {
+const makeHtmlUpdater = (element) => (statusMessage) => {
     element.innerHTML = statusMessage
+}
+
+async function getAuth(formData) {
+    return await (await fetch("auth/auth.php", {
+        body: formData,
+        method: "post"
+    })).text();
 }
 
 function getFormData(form) {

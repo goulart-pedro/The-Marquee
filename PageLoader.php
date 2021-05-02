@@ -4,8 +4,8 @@
 class PageLoader
 {
     private $database;
-    public $pages = [];
-    public $pageID;
+    private $pages = [];
+    private $pageID;
     public function __construct()
     {
         $this->database = new Database;
@@ -15,7 +15,6 @@ class PageLoader
         $this->pages['admin'] =  'pages/edit.php';
         $this->pages['login'] =  'pages/login.php';
         $this->pages['films'] =  'pages/login.php';
-        $this->pages['cheklogin'] = 'Source/cheklogin.php';
     }
 
     public function getPage()
