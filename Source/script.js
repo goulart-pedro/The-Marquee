@@ -20,7 +20,7 @@ function loadSearch() {
             searchResults.innerHTML = this.responseText;
         };
 
-        xhr.open("get", `api/api.php?display=search&term=${event.target.value}`, true);
+        xhr.open("get", `api/api.php?page=search&term=${event.target.value}`, true);
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.send();
     });

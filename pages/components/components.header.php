@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="./css/components/components.buttons.css">
     <link rel="stylesheet" href="./css/components/components.searchbar.css">
     <link rel="stylesheet" href="./css/components/components.icons.css">
-
 </head>
 
 <body>
     <header class="header">
         <div class="header-wrapper">
             <div>
-                <span class="header-logo"><img src="./img/themarquee_logo.png" alt=""></span>
+                <span class="header-logo"><img src="./img/themarquee_logo.png"></span>
             </div>
 
             <div class="login-area">
@@ -41,16 +40,16 @@
 
     <div js-data="search-bar" class="search-area">
         <div class="input-wrapper">
-            <span js-data="search-close-button" class="close-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-                </svg>
-            </span>
-            <input type="text" class="search-bar" id="search-bar" placeholder="Procurando por um filme?" />
+            <input type="text" class="search-bar" id="search-bar" placeholder="Digite para pesquisar" />
             <!-- <span id="form-clear-button">Cancelar</span> -->
+          <span js-data="search-close-button" class="close-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                 <path d="M0 0h24v24H0V0z" fill="none" />
+                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+             </svg>
+         </span>
         </div>
-        <div id="results"></div>
+       <div id="results"></div>
     </div>
 </body>
 

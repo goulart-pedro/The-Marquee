@@ -28,7 +28,7 @@
 }
 
 .hero__imagem__fundo {
-    width: 80%;
+    height: 80%;
     grid-column: 1;
     grid-row: 2;
 }
@@ -41,7 +41,7 @@
     height: auto;
     width: 100%;
     object-fit: contain;
-    max-height: 70vh;
+    max-height: 90vh;
     filter: drop-shadow(12px 24px 86px rgba(0, 0, 0, 0.2));
 }
 

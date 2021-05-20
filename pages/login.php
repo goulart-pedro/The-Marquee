@@ -14,8 +14,8 @@
 
             <div class="form-wrapper">
                 <form name="login-form" onsubmit="return handleLogin(event, this)" method="post">
-                    <input name="user_name" type="text" placeholder="Nome" required>
-                    <input name="user_password" type="password" placeholder="Senha" required>
+                    <input required name="user_name" type="text" placeholder="Nome">
+                    <input required name="user_password" type="password" placeholder="Senha">
                     <button type="submit" id="login-button" class="button" btn-variant="contained">
                         <span class="button__label">Entrar</span>
                     </button>

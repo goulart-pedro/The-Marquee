@@ -1,6 +1,4 @@
 <?php
-
-
 define('APP_ROOT', __DIR__);
 include('./Source/Database.php');
 include('./PageLoader.php');

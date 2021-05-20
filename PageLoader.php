@@ -14,12 +14,33 @@ class PageLoader
 
         $this->pages['admin'] =  'pages/edit.php';
         $this->pages['login'] =  'pages/login.php';
-        $this->pages['films'] =  'pages/login.php';
+        $this->pages['filmes'] =  'pages/films.php';
+        $this->pages['movie'] =  'pages/movie.php';
+        $this->pages['home']  =  'pages/home.php';
     }
 
     public function getPage()
     {
-        if (isset($this->pages[$this->pageID])) include $this->pages[$this->pageID];
+        $pageIsOnCLass = isset($this->pages[$this->pageID]);
+
+        if ($pageIsOnCLass)
+        {
+            if($_GET['page'] == 'movie') {
+                $this->handleMovie();
+            }
+
+            include $this->pages[$this->pageID];
+        }
         else echo $this->database->getPages($this->pageID)['content'];
+    }
+
+    private function handleMovie() 
+    {
+        $currMovie = $this->database->getMovie($_GET['id']);
+        $images = $this->database->getImages($_GET['id']);
+        $related = $this->database->getRelated($_GET['id']);
+        include $this->pages[$this->pageID];
+        return true;
+
     }
 }

@@ -1,7 +1,8 @@
 
 const handleLogin = async (inputEvent, form) => {
     inputEvent.preventDefault() // stops form submission
-    const updateLoginStatus = makeHtmlUpdater(document.querySelector('[js-data=login-status]'))
+    const statusDiv = document.querySelector('[js-data=login-status]')
+    const updateLoginStatus = makeHtmlUpdater(statusDiv)
     updateLoginStatus('Verificando Informações');
 
     const formData = getFormData(form);
@@ -25,10 +26,11 @@ const makeHtmlUpdater = (element) => (statusMessage) => {
 }
 
 async function getAuth(formData) {
-    return await (await fetch("auth/auth.php", {
+    const response = await fetch("auth/auth.php", {
         body: formData,
         method: "post"
-    })).text();
+    })
+    return await response.text();
 }
 
 function getFormData(form) {

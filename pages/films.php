@@ -15,22 +15,22 @@
                 <h4>Faroeste</h4>
             </div>
             <div class="film-row">
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=onceUponATime">
-                        <img src="./img/onceUponATime__thumbnail.webp" />
-                        <div>
-                            <span class="card-label"> Era uma vez no Oeste </span>
-                        </div>
-                    </a>
-                </mq-card>
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=hatefulEight">
-                        <img src="./img/hatefulEight__thumbnail.webp" />
-                        <div>
-                            <span class="card-label"> Os Oito Odiados </span>
-                        </div>
-                    </a>
-                </mq-card>
+            <mq-card mq-variant="medium" ripple>
+                <a href="?page=movie&id=9" class="card-link">
+                    <img src='./img/9/thumbnail.webp' />
+                    <div>
+                        <span class="card card-label">Era uma vez no Oeste </span>
+                    </div>
+                </a>
+            </mq-card>
+            <mq-card mq-variant="medium" ripple>
+                <a href="?page=movie&id-4" class="card-link">
+                    <img src='./img/4/thumbnail.webp' />
+                    <div>
+                        <span class="card card-label">Os Oito Odiados </span>
+                    </div>
+                </a>
+            </mq-card>
             </div>
         </section>
 
@@ -39,21 +39,21 @@
                 <h4>Ficção Científica</h4>
             </div>
             <div class="film-row">
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=interstellar">
-                        <img src="./img/interstellar__thumbnail.webp" />
+                <mq-card mq-variant="medium" ripple>
+                    <a href="?page=movie&id=5" class="card-link">
+                        <img src='./img/5/thumbnail.webp' />
                         <div>
-                            <span class="card-label"> Interestelar </span>
+                            <span class="card card-label">Interestelar</span>
                         </div>
                     </a>
                 </mq-card>
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=martian">
-                        <img src="./img/martian__thumbnail.webp" />
-                        <div>
-                            <span class="card-label"> Perdido Em Marte </span>
-                        </div>
-                    </a>
+                <mq-card mq-variant="medium" ripple>
+                <a href="?page=movie&id=8" class="card-link">
+                    <img src='./img/8/thumbnail.webp' />
+                    <div>
+                        <span class="card card-label">Perdido Em Marte </span>
+                    </div>
+                </a>
                 </mq-card>
             </div>
         </section>
@@ -63,19 +63,19 @@
                 <h4>Fantasia</h4>
             </div>
             <div class="film-row">
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=logan">
-                        <img src="./img/logan__thumbnail.webp" />
+                <mq-card mq-variant="medium" ripple>
+                    <a href="?page=movie&id=6" class="card-link">
+                        <img src='./img/6/thumbnail.webp' />
                         <div>
-                            <span class="card-label"> Logan </span>
+                            <span class="card card-label">Logan</span>
                         </div>
                     </a>
                 </mq-card>
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=lordOfTheRings">
-                        <img src="./img/lordOfTheRings__thumbnail.webp" />
+                <mq-card mq-variant="medium" ripple>
+                    <a href="?page=movie&id=7" class="card-link">
+                        <img src='./img/7/thumbnail.webp' />
                         <div>
-                            <span class="card-label"> O Senhor dos Anéis </span>
+                            <span class="card card-label">O Senhor dos Anéis</span>
                         </div>
                     </a>
                 </mq-card>
@@ -87,17 +87,17 @@
                 <h4>Musical</h4>
             </div>
             <div class="film-row">
-                <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=phantomOfTheOpera">
-                        <img src="./img/phantomOfTheOpera__thumbnail.webp" />
+                <mq-card mq-variant="medium" ripple>
+                    <a href="?page=movie&id=10" class="card-link">
+                        <img src='./img/10/thumbnail.webp' />
                         <div>
-                            <span class="card-label"> O Fantasma da Ópera </span>
+                            <span class="card card-label">O Fantasma da Ópera </span>
                         </div>
                     </a>
                 </mq-card>
                 <mq-card mq-variant="medium">
-                    <a class="card-link" href="?page=bohemianRhapsody">
-                        <img src="./img/bohemianRhapsody__thumbnail.webp" />
+                    <a class="card-link" href="?page=movie&id=2">
+                        <img src="./img/2/thumbnail.webp" />
                         <div>
                             <span class="card-label"> Bohemian Rhapsody </span>
                         </div>
