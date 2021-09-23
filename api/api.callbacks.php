@@ -1,5 +1,5 @@
 <?php
-require('../Source/Database.php');
+/*require('../Source/Database.php');
 
 function routeRequest($request) {
     $database = getDatabase();
@@ -56,42 +56,43 @@ function getSearch($database) {
     }
     return json_encode($pages);
 }
-// if ($_GET['page'] == 'img') {
-//     $images = $database->getImages($_GET['id']);
-//     echo ($images[$_GET['type']]);
-//     return true;
-// }
+*/
+if ($_GET['page'] == 'img') {
+       $images = $database->getImages($_GET['id']);
+       echo ($images[$_GET['type']]);
+       return true;
+   }
 
-// if ($_GET['page'] == 'movie') {
-//     $movie = $database->getMovie($_GET['id']);
-//     echo ($movie[$_GET['prop']]);
-//     return true;
-// }
+   if ($_GET['page'] == 'movie') {
+       $movie = $database->getMovie($_GET['id']);
+       echo ($movie[$_GET['prop']]);
+       return true;
+   }
 
-// if ($_GET['page'] == 'related') {
-//     $related = $database->getRelated($_GET['id']);
-//     // echo ($related[$_GET['rel-num']]);
-//     echo($related);
-//     return;
-// }
+   if ($_GET['page'] == 'related') {
+       $related = $database->getRelated($_GET['id']);
+       // echo ($related[$_GET['rel-num']]);
+       echo($related);
+       return;
+   }
 
-// if ($_GET['page'] == 'page') {
-//     $page = $database->getPages($_GET['pageName']);
-//     echo ($page['content']);
-//     return true;
-// }
+   if ($_GET['page'] == 'page') {
+       $page = $database->getPages($_GET['pageName']);
+       echo ($page['content']);
+       return true;
+   }
 
 
 
-// if ($_GET['page'] == 'search') {
-//     $searchTerm = $_GET['term'] ?? false;
-//     if (!$searchTerm) {
-//         return false;
-//     } 
+   if ($_GET['page'] == 'search') {
+       $searchTerm = $_GET['term'] ?? false;
+       if (!$searchTerm) {
+           return false;
+       } 
 
-//     $pages = $database->searchPages($searchTerm);
-//     echo json_encode($pages);
-//     return true;
-// }
+       $pages = $database->searchPages($searchTerm);
+       echo json_encode($pages);
+       return true;
+   }
 ?>
 
