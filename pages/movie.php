@@ -15,17 +15,17 @@
 </section>
 <section class="film-section">
     <div class="section-title">
-        <h4><?=$currMovie['title']?></h4>
+        <h4><?=$currMovie['Title']?></h4>
     </div>
 </section>
 <section id="sinopse">
     <div class="flex-container">
         <div class="description">
-            <p><?=$currMovie['description']?></p>
+            <p><?=$currMovie['Description']?></p>
         </div>
 
         <div class="sinopse-images">
-            <span class="tagline"><?=$currMovie['tagline']?></span>
+            <span class="tagline"><?=$currMovie['Tagline']?></span>
             <img src=<?=$images['sinopse__frente']?>  class="sinopse__frente" />
             <img src=<?=$images['sinopse__fundo']?>  class="sinopse__fundo" />
         </div>
