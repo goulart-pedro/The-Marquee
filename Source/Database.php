@@ -7,9 +7,9 @@ class Database
     public function __construct()
     {
 	// production variables
-	$host = '192.168.1.3:3306';
-	$dbuser = 'root';
-	$dbpwd = 'root';
+	$host = '';
+	$dbuser = '';
+	$dbpwd = '';
         $this->conn = new PDO("mysql:host=$host;dbname=Themarquee;charset=utf8", "$dbuser","$dbpwd");
         $this->getPages();
     }
