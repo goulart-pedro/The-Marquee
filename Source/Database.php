@@ -6,26 +6,37 @@ class Database
 
     public function __construct()
     {
-        // $this->conn = new PDO('mysql:host=localhost;dbname=themarquee;charset=utf8', 'root', '');
-        // $this->getPages();
+	// production variables
+	$host = '192.168.1.3:3306';
+	$dbuser = 'root';
+	$dbpwd = 'root';
+        $this->conn = new PDO("mysql:host=$host;dbname=Themarquee;charset=utf8", "$dbuser","$dbpwd");
+        $this->getPages();
     }
     
-    public function getImages($imageId) {
-        $imageSrc = $this->conn->prepare('SELECT * FROM images WHERE `id` = :n');
-        $imageSrc->bindParam(':n', $imageId);
-        $imageSrc->execute();
-        return $imageSrc->fetch(PDO::FETCH_ASSOC);
+
+    public function getImages($movieId) {
+	    $imageTypes = [
+		    "hero__frente" => "../img/$movieId/hero__frente.webp",
+		    "hero__fundo" => "../img/$movieId/hero__fundo.webp",
+		    "sinopse__frente" => "../img/$movieId/sinopse__frente.webp",
+		    "sinopse__fundo" => "../img/$movieId/sinopse__fundo.webp",
+		    "thumbnail" => "../img/$movieId/thumbnail.webp"
+	    ];
+
+	    return $imageTypes;
     }
 
+
     public function getMovie($movieId) {
-        $movie = $this->conn->prepare('SELECT * FROM movies WHERE `id` = :n');
+        $movie = $this->conn->prepare('SELECT * FROM Movies WHERE `id` = :n');
         $movie->bindParam(':n', $movieId);
         $movie->execute();
         return $movie->fetch(PDO::FETCH_ASSOC);
     }
 
     public function getRelated($movieId) {
-        $relatedArray = $this->conn->prepare('SELECT * FROM related WHERE `id` = :n');
+        $relatedArray = $this->conn->prepare('SELECT * FROM Related WHERE `id` = :n');
         $relatedArray->bindParam(':n', $movieId);
         $relatedArray->execute();
         var_dump($relatedArray->fetch(PDO::FETCH_ASSOC));
@@ -48,7 +59,7 @@ class Database
 
     public function searchPages($searchTerm)
     {
-        $pages = $this->conn->query("SELECT * FROM movies WHERE title LIKE '$searchTerm%'");
+        $pages = $this->conn->query("SELECT * FROM Movies WHERE title LIKE '$searchTerm%'");
         $pages->execute();
         return $pages->fetchAll(PDO::FETCH_ASSOC);
     }
