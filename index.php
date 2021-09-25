@@ -1,5 +1,5 @@
 <?php
-define('APP_ROOT', __DIR__);
+define('APP_ROOT', realpath(dirname(__FILE__)));
 include('./Source/Database.php');
 include('./PageLoader.php');
 $pageLoader = new PageLoader();

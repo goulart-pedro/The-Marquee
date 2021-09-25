@@ -1,16 +1,11 @@
 <?php
-
 class Database
 {
     private $conn;
 
-    public function __construct()
+    public function __construct($host, $dbusr, $dbpwd)
     {
-	// production variables
-	$host = '';
-	$dbuser = '';
-	$dbpwd = '';
-        $this->conn = new PDO("mysql:host=$host;dbname=Themarquee;charset=utf8", "$dbuser","$dbpwd");
+        $this->conn = new PDO("mysql:host=$host;dbname=Themarquee;charset=utf8", "$dbusr","$dbpwd");
         $this->getPages();
     }
     

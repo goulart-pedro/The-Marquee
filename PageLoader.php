@@ -1,6 +1,5 @@
 <?php
 
-
 class PageLoader
 {
     private $database;
@@ -8,7 +7,10 @@ class PageLoader
     private $pageID;
     public function __construct()
     {
-        $this->database = new Database;
+	// variaveis de producao
+	include(APP_ROOT."/dbhost.php");
+	
+        $this->database = new Database($host, $dbusr, $dbpwd);
 
         $this->pageID = $_GET['page'] ?? 'home';
 
