@@ -22,7 +22,6 @@ class Database
 	    return $imageTypes;
     }
 
-
     public function getMovie($movieId) {
         $movie = $this->conn->prepare('SELECT * FROM Movies WHERE `id` = :n');
         $movie->bindParam(':n', $movieId);

@@ -1,8 +1,8 @@
 <?php
 define('APP_ROOT', realpath(dirname(__FILE__)));
 include('./Source/Database.php');
-include('./PageLoader.php');
-$pageLoader = new PageLoader();
+include('./Router.php');
+$router= new Router();
 
 ?>
 
@@ -24,7 +24,7 @@ $pageLoader = new PageLoader();
         <theme-controll></theme-controll>
         <?php include('./pages/components/components.header.php') ?>
         <div class="wrapper">
-            <?php $pageLoader->getPage(); ?>
+            <?php $router->getPage(); ?>
             <?php include("./pages/components/components.footer.php") ?>
         </div>
         <?php include("./pages/components/components.navbar.php") ?>

@@ -1,7 +1,5 @@
 <?php
-require('../Source/Database.php');
 /*
-
 function routeRequest($request) {
     $database = getDatabase();
     $actions = [
