@@ -1,9 +1,6 @@
 <?php
-define('APP_ROOT', realpath(dirname(__FILE__)));
-include('./Source/Database.php');
-include('./Router.php');
-$router= new Router();
-
+include('Source/App.php');
+$app = new App();
 ?>
 
 <!DOCTYPE html>
@@ -16,20 +13,22 @@ $router= new Router();
     <link rel="stylesheet" href="./css/components/components.navbar.css">
     <link rel="stylesheet" href="./css/components/components.footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <!--debugging -->
+    <script src="node_modules/eruda/eruda.js"></script> <script>eruda.init();</script>
+    <!---->
     <title>The Marquee</title>
-</head>
+   </head>
 
 <body>
     <main class="dark">
         <theme-controll></theme-controll>
         <?php include('./pages/components/components.header.php') ?>
         <div class="wrapper">
-            <?php $router->getPage(); ?>
+            <?php $app->router->getPage(); ?>
             <?php include("./pages/components/components.footer.php") ?>
         </div>
         <?php include("./pages/components/components.navbar.php") ?>
     </main>
 
 </body>
-
 </html>
