@@ -10,12 +10,14 @@ function loadThemeSwitcher() {
     theme.updateClass()
 }
 
-function loadSearch() {
+async function loadSearch() {
+    const displayElement = document.querySelector("#results");
     const searchBar = document.querySelector("#search-bar");
-    searchBar.addEventListener("keyup", (event) => {
-        const searchResults = document.querySelector("#results");
-        // ajax(`Source/search.php?term=${event.target.value}`, "get");
-        const xhr = new XMLHttpRequest();
+    searchBar.addEventListener('keyup', (event) => await fetchResponse(displayElement))
+    /* searchBar.addEventListener("keyup", (event) => {
+        	//
+        
+	const xhr = new XMLHttpRequest();
         xhr.onload = function () {
             searchResults.innerHTML = this.responseText;
         };
@@ -23,7 +25,14 @@ function loadSearch() {
         xhr.open("get", `api/api.php?action=search&term=${event.target.value}`, true);
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.send();
-    });
+	
+    });*/
+}
+
+async function fetchResponse(displayElement) {
+    const searchResponse = await fetch(`api/api.php?action=search&term=${event.target.value}`);
+    displayElement.innerHTML = await searchResponse.json();
+
 }
 
 function loadSearchBar() {
