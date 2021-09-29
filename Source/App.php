@@ -9,7 +9,7 @@ class App {
 	public $database;
 
 	public function __construct() {
-	    $this->database = new Database('127.0.0.1:3306', 'root', 'root');
+	    $this->database = new Database('127.0.0.1:3306', '', '');
 	    $this->router = new Router(APP_ROOT, $database);
 	}
 }
