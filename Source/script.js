@@ -1,7 +1,7 @@
-import * as theme from "./js/theme.js";
+//import * as theme from "./js/theme.js";
 
 window.onload = () => {
-    loadThemeSwitcher();
+    //loadThemeSwitcher();
     loadSearch();
     loadSearchBar();
 };
