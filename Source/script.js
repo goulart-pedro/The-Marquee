@@ -1,39 +1,17 @@
 //import * as theme from "./js/theme.js";
+import { SearchHandler } from "./js/SearchHandler.js";
 
 window.onload = () => {
     //loadThemeSwitcher();
-    loadSearch();
+    //loadSearch();
+    const searchHandler = new SearchHandler();
     loadSearchBar();
 };
 
-function loadThemeSwitcher() {
+/* function loadThemeSwitcher() {
     theme.updateClass()
 }
-
-async function loadSearch() {
-    const displayElement = document.querySelector("#results");
-    const searchBar = document.querySelector("#search-bar");
-    searchBar.addEventListener('keyup', (event) => await fetchResponse(displayElement))
-    /* searchBar.addEventListener("keyup", (event) => {
-        	//
-        
-	const xhr = new XMLHttpRequest();
-        xhr.onload = function () {
-            searchResults.innerHTML = this.responseText;
-        };
-
-        xhr.open("get", `api/api.php?action=search&term=${event.target.value}`, true);
-        xhr.setRequestHeader("Content-type", "application/json");
-        xhr.send();
-	
-    });*/
-}
-
-async function fetchResponse(displayElement) {
-    const searchResponse = await fetch(`api/api.php?action=search&term=${event.target.value}`);
-    displayElement.innerHTML = await searchResponse.json();
-
-}
+*/
 
 function loadSearchBar() {
     const showButton = document.querySelector("[js-data=search-display-button]");
