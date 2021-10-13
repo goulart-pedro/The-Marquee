@@ -7,9 +7,9 @@ class Router
     private $pageID;
     public function __construct($serverRoot, $database)
     {
+        $this->database = $database;
         $this->pageID = $_GET['page'] ?? 'home';
-
-	$this->pages['admin'] =  'pages/edit.php';
+	    $this->pages['admin'] =  'pages/edit.php';
         $this->pages['login'] =  'pages/login.php';
         $this->pages['filmes'] =  'pages/films.php';
         $this->pages['movie'] =  'pages/movie.php';
