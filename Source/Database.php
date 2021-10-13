@@ -5,8 +5,8 @@ class Database
 
     public function __construct($host, $dbusr, $dbpwd)
     {
-        $this->conn = new PDO("mysql:host=$host;dbname=Themarquee;charset=utf8", "$dbusr","$dbpwd");
-        $this->getPages();
+        $this->conn = new PDO("mysql:host=$host;dbname=the-marquee;charset=utf8", "$dbusr","$dbpwd");
+        //$this->getPages();
     }
     
 
