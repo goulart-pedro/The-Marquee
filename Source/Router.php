@@ -5,7 +5,7 @@ class Router
     private $database;
     private $pages = [];
     private $pageID;
-    public function __construct($serverRoot, $database)
+    public function __construct($database)
     {
         $this->database = $database;
         $this->pageID = $_GET['page'] ?? 'home';
