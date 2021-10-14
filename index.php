@@ -13,9 +13,6 @@ $app = new App();
     <link rel="stylesheet" href="./css/components/components.navbar.css">
     <link rel="stylesheet" href="./css/components/components.footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
-    <!--debugging -->
-    <script src="node_modules/eruda/eruda.js"></script> <script>eruda.init();</script>
-    <!---->
     <title>The Marquee</title>
    </head>
 
