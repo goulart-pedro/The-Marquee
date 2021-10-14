@@ -1,0 +1,8 @@
+<?php
+define('APP_ROOT', realpath(dirname(__FILE__)));
+
+// Variaveis de ambiente para a conexão com o banco de dados
+$_ENV["DATABASE_NAME"]="nome-do-banco";
+$_ENV["DATABASE_HOST"]="ip:porta";
+$_ENV["DATABASE_PWD"]="senha";
+$_ENV["DATABASE_USR"]="usuario";
