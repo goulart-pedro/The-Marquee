@@ -1,17 +1,15 @@
-//import * as theme from "./js/theme.js";
+import * as theme from "./js/theme.js";
 import { SearchHandler } from "./js/SearchHandler.js";
 
 window.onload = () => {
     //loadThemeSwitcher();
-    //loadSearch();
     const searchHandler = new SearchHandler();
     loadSearchBar();
 };
 
-/* function loadThemeSwitcher() {
+function loadThemeSwitcher() {
     theme.updateClass()
 }
-*/
 
 function loadSearchBar() {
     const showButton = document.querySelector("[js-data=search-display-button]");
