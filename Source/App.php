@@ -1,7 +1,7 @@
 <?php
 include('./environment.php');
-include_once(APP_ROOT.'./Source/Database.php');
-include_once(APP_ROOT.'./Source/Router.php');
+include_once(APP_ROOT.'/Source/Database.php');
+include_once(APP_ROOT.'/Source/Router.php');
 
 class App {
 	function __construct()
