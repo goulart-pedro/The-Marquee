@@ -62,3 +62,14 @@
     background: var(--bg-color-elevated);
     height: min-content;
 }
+
+/*
+Query para evitar cards de pesquisa ficarem
+abaixo da barra de navegacao
+*/
+@media (min-width: 860px) {
+    .search-card{
+        margin-left: 5rem;
+        width: calc(100% - 5rem);
+    }
+}
