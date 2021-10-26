@@ -3,8 +3,12 @@ class ResultsDisplay {
         this.element = document.querySelector('#results');
     }
 
-    update(newValue) {
-        this.element['innerHTML'] = newValue;
+    
+    /* funcao deve ser async para receber
+    valores do evento de input
+    */
+    async update(newValue) {
+        this.element.innerHTML = await newValue;
     }
 }
 
@@ -39,8 +43,18 @@ export class SearchHandler {
     }
 
     async handleSearch(searchTerm) {
+        if(searchTerm.length == 0) 
+            return '';
+
         const response = await fetch(`api/api.php?action=search&term=${searchTerm}`);
         const results = await response.json();
         console.log(results)
+        return results.map(item => `
+            <div>
+                <a href=?page=movie&id=${item['Id']}>
+                    ${item['Title']} 
+                </a> 
+            </div> 
+        `)
     }
 }
