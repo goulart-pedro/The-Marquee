@@ -58,3 +58,12 @@
 .search-card:hover {
     filter: brightness(70%);
 }
+
+/* 
+* a fazer: background precisa ser escondido
+*/
+#results {
+    background: var(--bg-color);
+    height: min-content;
+    padding: 1rem; 
+}
