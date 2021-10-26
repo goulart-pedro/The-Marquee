@@ -1,19 +1,60 @@
+class ResultsDisplay {
+    constructor() {
+        this.element = document.querySelector('#results');
+    }
+
+    
+    /* funcao deve ser async para receber
+    valores do evento de input
+    */
+    async update(newValue) {
+        this.element.innerHTML = await newValue;
+    }
+}
+
+class SearchInput {
+    constructor() {
+        this.element = document.querySelector('#search-bar');
+        this.subscribers = [];
+        
+    }
+
+    subscribe(newSubscriber) {
+        this.subscribers.push(newSubscriber);
+    }
+
+    update(newValue) {
+        for (const subscriber of this.subscribers)  {
+            subscriber.update(newValue);
+        }
+    }
+}
+
 export class SearchHandler {
+    constructor() {
+        this.input = new SearchInput();
+        this.resultsElement = new ResultsDisplay();
+        
+        this.input.subscribe(this.resultsElement);
+        this.input.element.addEventListener("keyup", (event) =>
+            this.input.update(this.handleSearch(event.target.value)) 
+        );
+       
+    }
 
-	constructor() {
-		this.searchBar = document.querySelector("#search-bar");	
-		this.searchBar.addEventListener('keyup', (e) => this.handleSearch(e.target.value))
-		this.searchResultsEl = document.querySelector("#results");
+    async handleSearch(searchTerm) {
+        if(searchTerm.length == 0) 
+            return '';
 
-	}
-
-	displayResults(searchResults) {
-		this.searchResultsEl.innerHTML = searchResults;
-	}
-
-	async handleSearch(searchTerm) {
-		const searchResponse = await fetch(`api/api.php?action=search$term=${searchTerm}`);
-		this.displayResults(await searchResponse.json());
-	}
-
+        const response = await fetch(`api/api.php?action=search&term=${searchTerm}`);
+        const results = await response.json();
+        console.log(results)
+        return results.map(item => `
+            <div class=search-card>
+                <a href=?page=movie&id=${item['Id']}>
+                    ${item['Title']} 
+                </a> 
+            </div> 
+        `).join(" ")
+    }
 }

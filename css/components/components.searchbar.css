@@ -37,18 +37,17 @@
 }
 
 .search-card {
-    width: calc(100% - 5rem);
-    margin-left: 5rem;
-    background: var(--bg-color);
-    filter: brightness(120%);
+    width: 100%;
+    background: var(--bg-color-elevated);
     cursor: pointer;
+    display: flex;
     padding: 2ex;
-    transition: background 25ms ease;
 }
 
 .search-card a {
     text-decoration: none;
     color: var(--font-color);
+    width: 100%;
 }
 
 .search-card:hover > a {
@@ -56,5 +55,21 @@
 }
 
 .search-card:hover {
-    filter: brightness(70%);
+    filter: brightness(95%);
+}
+
+#results {
+    background: var(--bg-color-elevated);
+    height: min-content;
+}
+
+/*
+Query para evitar cards de pesquisa ficarem
+abaixo da barra de navegacao
+*/
+@media (min-width: 860px) {
+    .search-card{
+        margin-left: 5rem;
+        width: calc(100% - 5rem);
+    }
 }
