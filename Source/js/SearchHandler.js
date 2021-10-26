@@ -55,6 +55,6 @@ export class SearchHandler {
                     ${item['Title']} 
                 </a> 
             </div> 
-        `)
+        `).join(" ")
     }
 }
