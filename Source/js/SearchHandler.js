@@ -50,7 +50,7 @@ export class SearchHandler {
         const results = await response.json();
         console.log(results)
         return results.map(item => `
-            <div>
+            <div class=search-card>
                 <a href=?page=movie&id=${item['Id']}>
                     ${item['Title']} 
                 </a> 
