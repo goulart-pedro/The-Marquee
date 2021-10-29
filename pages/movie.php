@@ -8,6 +8,7 @@
 </style>
 
 <section id="hero">
+    <?php echo "<h1>" ;var_dump($related); echo "</h1>"?>
     <div class="grid__container">
         <img src=<?=$images['hero__frente']?> class="hero__imagem__frente" />
         <img src=<?=$images['hero__fundo']?> class="hero__imagem__fundo" />

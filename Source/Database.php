@@ -34,7 +34,9 @@ class Database
         $relatedArray->bindParam(':n', $movieId);
         $relatedArray->execute();
         var_dump($relatedArray->fetch(PDO::FETCH_ASSOC));
-        return $relatedArray->fetch(PDO::FETCH_ASSOC);
+        $arr = $relatedArray->fetch(PDO::FETCH_ASSOC);
+        $newArr = [$arr["Related1"],$arr["Related2"],$arr["Related3"],$arr["Related4"]];
+        return $newArr; 
     }
 
     public function getPages($pageName = null)
