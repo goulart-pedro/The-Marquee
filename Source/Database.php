@@ -33,7 +33,7 @@ class Database
         $relatedArray = $this->conn->prepare('SELECT * FROM Related WHERE `id` = :n');
         $relatedArray->bindParam(':n', $movieId);
         $relatedArray->execute();
-        var_dump($relatedArray->fetch(PDO::FETCH_ASSOC));
+        // var_dump($relatedArray->fetch(PDO::FETCH_ASSOC)['Related1']);
         return $relatedArray->fetch(PDO::FETCH_ASSOC);
     }
 

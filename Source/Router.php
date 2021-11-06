@@ -36,6 +36,10 @@ class Router
         $currMovie = $this->database->getMovie($_GET['id']);
         $images = $this->database->getImages($_GET['id']);
         $related = $this->database->getRelated($_GET['id']);
+        foreach ($related as $key => $item) {
+           $related[$key] = $this->database->getMovie($item);
+        } 
+        // $this->database->getRelated($_GET['id']);
         include $this->pages[$this->pageID];
         return true;
 
