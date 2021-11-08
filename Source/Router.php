@@ -16,12 +16,6 @@ class Router
         $this->pages['home']  =  'pages/home.php';
     }
 
-    /*
-     * public function routeGet($pageID) {
-        return $serverRoot.$this->pages[$pageID];
-     }
-     */
-
     public function getPage()
     {
         if($this->pageID == 'movie') {
@@ -39,7 +33,7 @@ class Router
         foreach ($related as $key => $item) {
            $related[$key] = $this->database->getMovie($item);
         } 
-        // $this->database->getRelated($_GET['id']);
+
         include $this->pages[$this->pageID];
         return true;
 
