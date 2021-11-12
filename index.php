@@ -14,7 +14,7 @@ $app = new App();
     <link rel="stylesheet" href="./css/components/components.footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
     <title>The Marquee</title>
-   </head>
+</head>
 
 <body>
     <main class="dark">

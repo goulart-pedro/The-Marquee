@@ -16,16 +16,13 @@ class Router
         $this->pages['home']  =  'pages/home.php';
     }
 
-    /*
-     * public function routeGet($pageID) {
-        return $serverRoot.$this->pages[$pageID];
-     }
-     */
-
     public function getPage()
     {
         if($this->pageID == 'movie') {
             $this->handleMovie();
+
+            // retorna para evitar duplo include
+            return;
         }
 
         include $this->pages[$this->pageID];
@@ -36,6 +33,17 @@ class Router
         $currMovie = $this->database->getMovie($_GET['id']);
         $images = $this->database->getImages($_GET['id']);
         $related = $this->database->getRelated($_GET['id']);
+
+        /**
+         * removendo primeiro related
+         * por ser o proprio filme atual
+         */
+        array_splice($related, 0, 1);
+
+        foreach ($related as $key => $item) {
+           $related[$key] = $this->database->getMovie($item);
+        } 
+
         include $this->pages[$this->pageID];
         return true;
 
