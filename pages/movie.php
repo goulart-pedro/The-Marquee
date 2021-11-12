@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <head>
     <link rel="stylesheet" href="./css/pages/pages.film.css" />
     <link rel="stylesheet" href="./css/components/components.buttons.css" />
@@ -21,42 +20,6 @@
                 <div class="description">
                     <p><?=$currMovie['Description']?></p>
                 </div>
-=======
-<link rel="stylesheet" href="./css/pages/pages.film.css" />
-<link rel="stylesheet" href="./css/components/components.buttons.css" />
-<style>
-    /* main {
-            --primary-color: "./img/darkestHour";
-            --secondary-color: "./img/darkestHour";
-        } */
-</style>
-
-<section id="hero">
-    <?php echo "<h1>" ;var_dump($related); echo "</h1>"?>
-    <div class="grid__container">
-        <img src=<?=$images['hero__frente']?> class="hero__imagem__frente" />
-        <img src=<?=$images['hero__fundo']?> class="hero__imagem__fundo" />
-    </div>
-</section>
-<section class="film-section">
-    <div class="section-title">
-        <h4><?=$currMovie['Title']?></h4>
-    </div>
-</section>
-<section id="sinopse">
-    <div class="flex-container">
-        <div class="description">
-            <p><?=$currMovie['Description']?></p>
-        </div>
-
-        <div class="sinopse-images">
-            <span class="tagline"><?=$currMovie['Tagline']?></span>
-            <img src=<?=$images['sinopse__frente']?>  class="sinopse__frente" />
-            <img src=<?=$images['sinopse__fundo']?>  class="sinopse__fundo" />
-        </div>
-    </div>
-</section>
->>>>>>> main
 
                 <div class="sinopse-images">
                     <span class="tagline"><?=$currMovie['Tagline']?></span>

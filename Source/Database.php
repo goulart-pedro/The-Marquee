@@ -33,14 +33,7 @@ class Database
         $relatedArray = $this->conn->prepare('SELECT * FROM Related WHERE `id` = :n');
         $relatedArray->bindParam(':n', $movieId);
         $relatedArray->execute();
-<<<<<<< HEAD
         return $relatedArray->fetch(PDO::FETCH_ASSOC);
-=======
-        var_dump($relatedArray->fetch(PDO::FETCH_ASSOC));
-        $arr = $relatedArray->fetch(PDO::FETCH_ASSOC);
-        $newArr = [$arr["Related1"],$arr["Related2"],$arr["Related3"],$arr["Related4"]];
-        return $newArr; 
->>>>>>> main
     }
 
     public function getPages($pageName = null)
