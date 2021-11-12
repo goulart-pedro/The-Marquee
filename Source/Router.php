@@ -20,6 +20,8 @@ class Router
     {
         if($this->pageID == 'movie') {
             $this->handleMovie();
+
+            // retorna para evitar duplo include
             return;
         }
 
