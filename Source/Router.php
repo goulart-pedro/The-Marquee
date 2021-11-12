@@ -20,6 +20,7 @@ class Router
     {
         if($this->pageID == 'movie') {
             $this->handleMovie();
+            return;
         }
 
         include $this->pages[$this->pageID];
