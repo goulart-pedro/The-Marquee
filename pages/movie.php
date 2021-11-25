@@ -58,7 +58,7 @@
                <?php foreach ($related as $item): ?>
                 <mq-card mq-variant="medium">
                     <a class="card-link" href="page=movie&id=<?=$item['Id']?>">
-                        <img src=<?=$images['thumbnail']?> />
+                        <img src=<?php echo "./img/".$item['Id']."/thumbnail.webp"?> />
                         <div>
                             <span class="card card-label"><?=$item['Title']?></span>
                         </div>
