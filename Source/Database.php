@@ -12,11 +12,11 @@ class Database
 
     public function getImages($movieId) {
 	    $imageTypes = [
-		    "hero__frente" => "../img/$movieId/hero__frente.webp",
-		    "hero__fundo" => "../img/$movieId/hero__fundo.webp",
-		    "sinopse__frente" => "../img/$movieId/sinopse__frente.webp",
-		    "sinopse__fundo" => "../img/$movieId/sinopse__fundo.webp",
-		    "thumbnail" => "../img/$movieId/thumbnail.webp"
+		    "hero__frente" => "./img/$movieId/hero__frente.webp",
+		    "hero__fundo" => "./img/$movieId/hero__fundo.webp",
+		    "sinopse__frente" => "./img/$movieId/sinopse__frente.webp",
+		    "sinopse__fundo" => "./img/$movieId/sinopse__fundo.webp",
+		    "thumbnail" => "./img/$movieId/thumbnail.webp"
 	    ];
 
 	    return $imageTypes;
