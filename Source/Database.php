@@ -62,4 +62,11 @@ class Database
         $qry = $this->conn->prepare("UPDATE pages SET content = '$newValue' WHERE name = '$pageName'");
         $qry->execute();
     }
+
+    public function getUser($email) {
+        $qry = $this->conn->prepare('SELECT * FROM pages where `Email` = :n');
+        $qry->bindParam(':n', $email);
+        $qry->execute();
+        return $qry->fetch(PDO::FETCH_ASSOC);
+    }
 }
