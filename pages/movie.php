@@ -29,6 +29,31 @@
             </div>
         </section>
 
+        <section id="comments">
+            <div class="section-title">
+                <h4>Comentarios</h4>
+            </div>
+            <div class="write-comment">
+                <form action="">
+                <input type="hidden" value="Author">
+                <input type="hidden" value=<?=$currMovie['Id']?>>
+                <textarea name="Text" id="new-comment-area" cols="30" rows="2" placeholder="escreva seu comentario aqui"></textarea>
+                <button>Pronto</button>
+                </form>
+                
+            </div>
+            <div class="comment-list">
+                <div class="comment-wrapper">
+                    <p id="author">Autor</p>
+                    <p id="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, enim, reiciendis deserunt ad obcaecati minus quae nisi odit iusto esse adipisci! Ratione assumenda nemo illo odio impedit quaerat iste recusandae temporibus eum quasi deserunt accusamus quibusdam, excepturi vitae corporis deleniti.</p>
+                </div> 
+                <div class="comment-wrapper">
+                    <p id="author">Autor</p>
+                    <p id="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, enim, reiciendis deserunt ad obcaecati minus quae nisi odit iusto esse adipisci! Ratione assumenda nemo illo odio impedit quaerat iste recusandae temporibus eum quasi deserunt accusamus quibusdam, excepturi vitae corporis deleniti.</p>
+                </div> 
+            </div>
+        </section>
+
         <section class="film-section">
             <div class="section-title">
                 <h4>Trailer</h4>
@@ -67,5 +92,6 @@
                 <?php endforeach ?>
             </div>
         </section>
+       
     </body>
 </html>

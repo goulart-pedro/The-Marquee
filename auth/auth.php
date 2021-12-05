@@ -6,38 +6,41 @@ if(!isset($POST['user_name']))
 */
 require_once('../environment.php');
 require_once('../Source/Database.php');
-function handleLogin()
-{
-    [$name, $passwd] = getLoginInfo($_POST); 
 
-    if (!areCredentialsValid($name, $passwd))
-        return "no";
 
-    setcookie("USER_SESSION", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
-    return 'ok';
-       
-}
+class AuthHandler {
 
-// dependency injection not working
-function getLoginInfo($requisition)
-{
-    return [$_POST['user_name'], $_POST['user_password']];
-}
-
-function areCredentialsValid(string $username, string $password)
-{
-     /* Instanciando app para ter acesso
-    ao banco de dados */
-    $database = new Database($_ENV['DATABASE_NAME'], $_ENV['DATABASE_HOST'], $_ENV['DATABASE_USR'], $_ENV['DATABASE_PWD']);
-
-    $user = $database->getUser($username);
-    
-    /* saindo se usuario nao existe */
-    if(count($user) == 0) {
-        return false;
+    public function __construct() {
+        /* Instanciando database para ter acesso
+        ao banco de dados */
+        $this->database = new Database($_ENV['DATABASE_NAME'], $_ENV['DATABASE_HOST'], $_ENV['DATABASE_USR'], $_ENV['DATABASE_PWD']); 
     }
-    return hash('sha256', $password) == $user['Passwd'];
+
+    public function handleLogin() {
+        [$name, $passwd] = $this->getLoginInfo(); 
+
+        if (!$this->verifyCredentials($name, $passwd))
+            return "no";
+
+        setcookie("USER_SESSION", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
+        return 'ok';
+    }
+
+    public function verifyCredentials(string $username, string $password) {
+        $user = $this->database->getUser($username);
+    
+        /* saindo se usuario nao existe */
+        if(count($user) == 0) {
+            return false;
+        }
+        return hash('sha256', $password) == $user['Passwd'];
+    }
+
+    public function getLoginInfo() {
+        return [$_POST['user_name'], $_POST['user_password']];
+    }
 }
 
-echo handleLogin();
+$auth = new AuthHandler();
+echo $auth->handleLogin();
 ?>

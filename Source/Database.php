@@ -69,4 +69,12 @@ class Database
         $qry->execute();
         return $qry->fetch(PDO::FETCH_ASSOC);
     }
+    
+    public function comment() {
+        $qry = $this->conn->prepare('INSERT INTO Comments (Author, Movie, Text) values :n, :m, :p');
+        $qry->bindParam(':n', $author);
+        $qry->bindParam(':m', $currMovieId);
+        $qry->bindParam(':p', $text);
+        $qry->execute();
+    }
 }
