@@ -4,7 +4,8 @@ if(!isset($POST['user_name']))
 /*--------
     Login Page has to be refreshed for cookie to set
 */
-
+require_once('../environment.php');
+require_once('../Source/Database.php');
 function handleLogin()
 {
     [$name, $passwd] = getLoginInfo($_POST); 
@@ -25,7 +26,17 @@ function getLoginInfo($requisition)
 
 function areCredentialsValid(string $username, string $password)
 {
-    return $username == 'Adm' && $password == '123';
+     /* Instanciando app para ter acesso
+    ao banco de dados */
+    $database = new Database($_ENV['DATABASE_NAME'], $_ENV['DATABASE_HOST'], $_ENV['DATABASE_USR'], $_ENV['DATABASE_PWD']);
+
+    $user = $database->getUser($username);
+    
+    /* saindo se usuario nao existe */
+    if(count($user) == 0) {
+        return false;
+    }
+    return hash('sha256', $password) == $user['Passwd'];
 }
 
 echo handleLogin();
