@@ -79,7 +79,7 @@ class Database
     }
     
     public function getComments($movieId) {
-        $qry = $this->conn->prepare("SELECT * FROM Comments WHERE Movie = :x");
+        $qry = $this->conn->prepare("SELECT * FROM Comments WHERE Movie = :x ORDER BY Id DESC");
         $qry->bindParam(':x', $movieId);
         $qry->execute();
         return $qry->fetchAll(PDO::FETCH_ASSOC);

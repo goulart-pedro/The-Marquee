@@ -38,15 +38,26 @@
                 <form id="comment-form" onsubmit="return sendComment()" method="post">
                     <input name="Author" type="hidden" value="<?php echo(htmlspecialchars($_COOKIE['USER_SESSION']))?>">
                     <input name="Movie" type="hidden" value=<?=$currMovie['Id']?>>
-                    <textarea name="Text" id="new-comment-area" cols="30" rows="2" placeholder="escreva seu comentario aqui"></textarea>
-                    <button id="submit-comment">Pronto</button>
+                    <div class="text-wrapper">
+                        <textarea maxlength="64" name="Text" id="new-comment-area" rows="1" placeholder="escreva seu comentario aqui"></textarea>
+                        <button id="submit-comment" class="button" btn-variant="text">
+                            <span class="button__label">Enviar</span>
+                        </button>                   
+                    </div>
+
+
                 </form>
             </div>
             <div class="comment-list">
                 <?php foreach ($comments as $comment): ?>
                 <div class="comment-wrapper">
-                    <p id="author"><?=$comment['Author']?></p>
-                    <p id="comment"><?=$comment['Text']?></p>
+                    <div class="pic-wrapper">
+                        <p class="pic"><?=$comment['Author'][0]?></p>
+                    </div>
+                    <div>
+                        <p id="author"><?=$comment['Author']?></p>
+                        <p id="comment"><?=$comment['Text']?></p>
+                    </div>
                 </div> 
                 <?php endforeach ?>
             </div>

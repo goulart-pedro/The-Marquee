@@ -77,7 +77,7 @@ if ($_GET['action'] == 'img') {
 
    if ($_GET['action'] == 'page') {
        $page = $database->getPages($_GET['pageName']);
-       echo ($page['content']);
+       echo $page;
        return true;
    }
 
