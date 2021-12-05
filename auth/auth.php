@@ -17,26 +17,27 @@ class AuthHandler {
     }
 
     public function handleLogin() {
-        [$name, $passwd] = $this->getLoginInfo(); 
+        [$email, $passwd] = $this->getLoginInfo(); 
 
-        if (!$this->verifyCredentials($name, $passwd))
+        $user = $this->database->getUser($email);
+    
+        /* saindo se usuario nao existe */
+        if(count($user) == 0)
+            return 'no';
+        
+        if (!$this->verifyCredentials($email, $passwd, $user['Passwd']))
             return "no";
 
-        setcookie("USER_SESSION", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
+        setcookie("USER_SESSION", $user['Name'], time() + (86400 * 30), "/"); // 86400 = 1 day
         return 'ok';
     }
 
-    public function verifyCredentials(string $username, string $password) {
-        $user = $this->database->getUser($username);
-    
-        /* saindo se usuario nao existe */
-        if(count($user) == 0) {
-            return false;
-        }
-        return hash('sha256', $password) == $user['Passwd'];
+    private function verifyCredentials(string $email, string $inputPassword, string $hashedPassword) {
+       
+        return hash('sha256', $inputPassword) == $hashedPassword;
     }
 
-    public function getLoginInfo() {
+    private function getLoginInfo() {
         return [$_POST['user_name'], $_POST['user_password']];
     }
 }

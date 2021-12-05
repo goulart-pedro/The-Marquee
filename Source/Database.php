@@ -70,11 +70,18 @@ class Database
         return $qry->fetch(PDO::FETCH_ASSOC);
     }
     
-    public function comment() {
-        $qry = $this->conn->prepare('INSERT INTO Comments (Author, Movie, Text) values :n, :m, :p');
-        $qry->bindParam(':n', $author);
-        $qry->bindParam(':m', $currMovieId);
-        $qry->bindParam(':p', $text);
+    public function comment($author, $movie, $text) {
+        $qry = $this->conn->prepare("INSERT INTO Comments (Author, Movie, Text) values (:x, :y, :z)");
+        $qry->bindParam(':x', $author);
+        $qry->bindParam(':y', $movie);
+        $qry->bindParam(':z', $text);
         $qry->execute();
+    }
+    
+    public function getComments($movieId) {
+        $qry = $this->conn->prepare("SELECT * FROM Comments WHERE Movie = :x");
+        $qry->bindParam(':x', $movieId);
+        $qry->execute();
+        return $qry->fetchAll(PDO::FETCH_ASSOC);
     }
 }

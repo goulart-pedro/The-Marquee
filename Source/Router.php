@@ -33,6 +33,7 @@ class Router
         $currMovie = $this->database->getMovie($_GET['id']);
         $images = $this->database->getImages($_GET['id']);
         $related = $this->database->getRelated($_GET['id']);
+        $comments = $this->database->getComments($_GET['id']);
 
         /**
          * removendo primeiro related

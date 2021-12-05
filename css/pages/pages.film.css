@@ -155,6 +155,8 @@
 }
 #new-comment-area {
   background: var(--bg-color-darker);
+
+  color: var(--font-color);
   border-radius: 0.25rem;
   border: none;
   padding: 1rem;
@@ -163,8 +165,6 @@
 
 .comment-list {
   padding: 1rem 0rem 2rem 0rem;
-  display: flex;
-  gap: 0.2rem;
 }
 
 .comment-wrapper {
@@ -172,6 +172,10 @@
   border: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.comment-wrapper:last-child {
+  margin-bottom: 0;
 }
 
 #author {

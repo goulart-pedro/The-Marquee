@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" href="./css/pages/pages.film.css" />
     <link rel="stylesheet" href="./css/components/components.buttons.css" />
+    <script src="./Source/js/CommentHandler.js" defer></script>
 </head>
 <html>
     <body>
@@ -34,23 +35,20 @@
                 <h4>Comentarios</h4>
             </div>
             <div class="write-comment">
-                <form action="">
-                <input type="hidden" value="Author">
-                <input type="hidden" value=<?=$currMovie['Id']?>>
-                <textarea name="Text" id="new-comment-area" cols="30" rows="2" placeholder="escreva seu comentario aqui"></textarea>
-                <button>Pronto</button>
+                <form id="comment-form" onsubmit="return sendComment()" method="post">
+                    <input name="Author" type="hidden" value="<?php echo(htmlspecialchars($_COOKIE['USER_SESSION']))?>">
+                    <input name="Movie" type="hidden" value=<?=$currMovie['Id']?>>
+                    <textarea name="Text" id="new-comment-area" cols="30" rows="2" placeholder="escreva seu comentario aqui"></textarea>
+                    <button id="submit-comment">Pronto</button>
                 </form>
-                
             </div>
             <div class="comment-list">
+                <?php foreach ($comments as $comment): ?>
                 <div class="comment-wrapper">
-                    <p id="author">Autor</p>
-                    <p id="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, enim, reiciendis deserunt ad obcaecati minus quae nisi odit iusto esse adipisci! Ratione assumenda nemo illo odio impedit quaerat iste recusandae temporibus eum quasi deserunt accusamus quibusdam, excepturi vitae corporis deleniti.</p>
+                    <p id="author"><?=$comment['Author']?></p>
+                    <p id="comment"><?=$comment['Text']?></p>
                 </div> 
-                <div class="comment-wrapper">
-                    <p id="author">Autor</p>
-                    <p id="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, enim, reiciendis deserunt ad obcaecati minus quae nisi odit iusto esse adipisci! Ratione assumenda nemo illo odio impedit quaerat iste recusandae temporibus eum quasi deserunt accusamus quibusdam, excepturi vitae corporis deleniti.</p>
-                </div> 
+                <?php endforeach ?>
             </div>
         </section>
 

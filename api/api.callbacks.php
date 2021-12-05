@@ -93,5 +93,11 @@ if ($_GET['action'] == 'img') {
        echo json_encode($pages);
        return true;
    }
+
+    if ($_GET['action'] == 'comment') {
+       $database->comment($_POST['Author'], $_POST['Movie'], $_POST['Text']);
+       echo ($_POST['Text']);
+       return true;
+   }
 ?>
 
